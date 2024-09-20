@@ -1,73 +1,139 @@
-
-
-.footer{
+.footer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr;
+    grid-template-columns: repeat(6, 1fr);
     padding: 4.5vmax;
     background-color: rgb(37, 37, 37);
     color: rgb(197, 197, 197);
 }
 
-.footer > div{
-    margin:1vmax;
+.footer > div {
+    margin: 1vmax;
     display: flex;
     flex-direction: column;
-
+    align-items: flex-start;
 }
 
-.footer > div:nth-child(2){
+.footer > div:nth-child(2) {
     display: block;
 }
-.footer > div:nth-child(2) >a{
-        display: inline-block;
 
+.footer > div:nth-child(2) > a {
+    display: inline-block;
 }
-.footer > div > a{
+
+.footer > div > a {
     color: rgb(197, 197, 197);
     font-size: 1vmax;
     text-decoration: none;
     margin: 0.6vmax 0;
+    transition: color 0.3s; /* Smooth color transition */
 }
 
-.footer > div > a:hover{
+.footer > div > a:hover {
     color: white;
 }
 
-
-.footer > div:last-child >div{
-    width: 45%;
+.footer > div:last-child > div {
+    width: 100%;
     margin: 1vmax 0;
     font-size: 0.8vmax;
 }
 
-.footer > div:last-child >button{
-width: 50%;
-border:1px solid white;
-background-color: rgb(37, 37, 37);
-color: white;
-padding: 0.6vmax 0;
-font-size: 0.98vmax;
-font-weight: 100;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-transition: all 0.5s;
+.footer > div:last-child > button {
+    width: 80%;
+    border: 1px solid white;
+    background-color: rgb(37, 37, 37);
+    color: white;
+    padding: 0.6vmax 0;
+    font-size: 0.98vmax;
+    font-weight: 100;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: background-color 0.5s, color 0.5s; /* Smooth transitions */
 }
 
-.footer > div:last-child >button:hover{
+.footer > div:last-child > button:hover {
     background-color: rgb(248, 244, 244);
     color: rgb(37, 37, 37);
 }
 
-.footerBorder{
-    background-color:   rgb(37, 37, 37)  ; 
+.footerBorder {
+    background-color: rgb(37, 37, 37);
     color: white;
-    
 }
-.footerBorder >div{
-    border-top: 1px solid rgba(197, 197, 197, 0.185) ;
+
+.footerBorder > div {
+    border-top: 1px solid rgba(197, 197, 197, 0.185);
     color: rgb(197, 197, 197);
     width: 90vmax;
     margin: auto;
     padding: 2vmax;
-   font-size: 0.98vmax;
+    font-size: 0.98vmax;
 }
 
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .footer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer > div > a {
+        font-size: 1.1vmax; /* Increased font size */
+    }
+}
+
+@media (max-width: 800px) {
+    .footer {
+        grid-template-columns: 1fr; /* Stacking columns */
+        padding: 2vmax; /* Reduced padding */
+    }
+
+    .footer > div {
+        margin: 1vmax; /* More space for elements */
+        align-items: center; /* Center align for better visibility */
+    }
+
+    .footer > div > a {
+        font-size: 1.3vmax; /* Increased font size for better readability */
+        text-align: center; /* Centered text */
+        margin: 1vmax 0; /* More margin for spacing */
+    }
+
+    .footer > div:last-child > button {
+        width: 90%; /* Wider button */
+        font-size: 1.2vmax; /* Larger button font size */
+    }
+}
+
+@media (max-width: 500px) {
+    .footer {
+        padding: 1vmax; /* Further reduced padding */
+    }
+
+    .footer > div > a {
+        font-size: 1.5vmax; /* Even larger text for small screens */
+        margin: 1vmax 0; /* Increased margin */
+    }
+}
+@media (max-width: 880px) {
+    .footer {
+        grid-template-columns: 1fr; /* Stacking columns for better alignment */
+        padding: 2vmax; /* Reduced padding */
+    }
+
+    .footer > div {
+        margin: 1vmax 0; /* Ensure margin for spacing */
+        align-items: center; /* Center align for better visibility */
+        text-align: center; /* Center text for better alignment */
+    }
+
+    .footer > div > a {
+        font-size: 1.3vmax; /* Increased font size for readability */
+        margin: 1vmax 0; /* Increased margin for spacing */
+    }
+
+    .footer > div:last-child > button {
+        width: 90%; /* Wider button */
+        font-size: 1.2vmax; /* Larger button font size */
+        margin-top: 1vmax; /* Margin above button for spacing */
+    }
+}

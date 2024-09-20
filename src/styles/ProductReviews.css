@@ -1,7 +1,11 @@
 
 .ProductReviews{
+    flex-direction: row;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+    /* flex-direction: row; */
     display: flex;
-    width: 90vw;
-    margin: auto;
-    justify-content: center;
+    /* width: 90vw; */
+   gap: 5px;
+    justify-content:center
 }

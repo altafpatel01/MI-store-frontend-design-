@@ -11,24 +11,30 @@
 
 
 .logo{
-    background-color: orangered;
-    width: 58px;
-    border-radius: 20px;
+    
+    background-color: #ff4500;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
     position: relative;
     right: 2vmax;
 }
 
-#logoImage{
-    transition:all 0.2s;
+.logolink{
     
-    transform: translateX(-58px);
+    position: absolute;
+    transform: translateX(0px);
+   width: 68px;
+   height: 38px;
+   transition: transform 0.3s ease;
+    /* background: #000; */
+    
 }
-
-#logoImage:hover{
-  
-    transform: translateX(0);
+.logolink:hover{
+    
+    transform: translateX(-36px);
 }
 
 .navlinks{

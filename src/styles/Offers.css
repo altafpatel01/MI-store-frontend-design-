@@ -1,12 +1,16 @@
 .offersSection{
+  flex-wrap: wrap;
     display: flex;
     justify-content: center;
+    /* justify-content:space-evenly; */
     align-items: center;
     padding: 1vmax;
+    gap: 10px;
   }
 
   .offersSection   img{
-    margin: 0 1vmax;
+    /* margin: 0 1vmax; */
+    /* width: 28%; */
     transition: all 0.5s;
 }
 

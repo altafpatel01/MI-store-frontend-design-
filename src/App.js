@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar.js"
 import {  BrowserRouter as Router,Route } from "react-router-dom"
 import Slider from "./components/Slider.js"
 import data from "./data/data.json"
-import Offers from "./components/Offers.js"
 import Heading  from "./components/Heading.js"
 import StarProduct from "./components/StarProduct.js"
 import HotAccessoriesMenu  from "./components/HotAccessoriesMenu.js"
@@ -28,7 +27,7 @@ function App() {
 
 
        <Slider start={data.banner.start} />
-       <Offers offer={data.offer} />
+       
        <Heading text="STAR PRODUCTS"/>
        <StarProduct starProduct={data.starProduct} />
        <Heading text="HOT ACCESSORIES" />
@@ -42,7 +41,7 @@ function App() {
        <HotAccessories smartDevice={data.hotAccessories.smartDevice} smartDeviceCover={data.hotAccessoriesCover.smartDevice}  />
        </Route>
 
-       <Route exact path="/home">
+       <Route exact path="/">
        <HotAccessories home={data.hotAccessories.home} homeCover={data.hotAccessoriesCover.home}  />
        </Route>
 
